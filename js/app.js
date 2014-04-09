@@ -312,7 +312,7 @@
     $('#deadmen-types-list').on('click', 'a.types', function(e) {
       e.preventDefault();
       if ($.isEmptyObject(deadman_selected)) {
-        $('.container > h2').css('color', 'red');
+        $('.container > h2').css('color', 'red').html('[ Select Deadman <i class="fa fa-exclamation"></i> ]');
         return;
       }
       return plot_selected_deadmans_stats($(this).data('type'));
