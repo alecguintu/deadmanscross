@@ -33,3 +33,8 @@ footer {
   font-size: 25px;
   margin-right: 10px;
 }
+
+#help-link { cursor: pointer; }
+/* Don't move modal */
+body.modal-open {margin-right: 0px}
+body.modal-open, .modal-open .navbar-fixed-top, .modal-open .navbar-fixed-bottom {margin-right: 0px;}

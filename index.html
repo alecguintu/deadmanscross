@@ -49,6 +49,9 @@
                 <!--li class="dropdown-header">Gold Square</li-->
               </ul>
             </li>
+            <li class="dropdown">
+              <a id="help-link" data-toggle="modal" data-target="#myModal">Help</a>
+            </li>
           </ul>
           <!--form class="navbar-form navbar-right">
             <div class="form-group">
@@ -124,6 +127,35 @@
         <p>All images are owned by Square Enix Co., Ltd.</p>
       </footer>
     </div> <!-- /container -->
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title" id="myModalLabel">Help</h4>
+          </div>
+          <div class="modal-body">
+            <ul>
+              <li>
+                Type guide. Check power on left of name changing color. This is very subjective based on resources online and recommendations. Use with your own judgement.
+                <ul>
+                  <li>
+                    <span style="color:#5bc0de">Awesome</span> | <span style="color:#5cb85c">Best</span> | <span style="color:#333">Decent</span> | <span style="color:#d9534f">Bad</span>
+                  </li>
+                </ul>
+              </li>
+              <li>Foo bar</li>
+            </ul>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.1.min.js"><\/script>')</script>
 
