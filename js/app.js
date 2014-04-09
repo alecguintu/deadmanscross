@@ -107,14 +107,6 @@
         spd: 2490,
         int: 2650
       },
-      boosts_on_stats: {
-        hlt: 517,
-        psy: 517,
-        atk: 486,
-        def: 444,
-        spd: 498,
-        int: 530
-      },
       types: {
         awesome: ['perfect'],
         best: ['smart', 'quick'],
@@ -133,14 +125,6 @@
         def: 2310,
         spd: 2570,
         int: 2450
-      },
-      boosts_on_stats: {
-        hlt: 510,
-        psy: 460,
-        atk: 480,
-        def: 462,
-        spd: 514,
-        int: 490
       },
       types: {
         awesome: ['perfect'],
@@ -161,14 +145,6 @@
         spd: 2490,
         int: 2590
       },
-      boosts_on_stats: {
-        hlt: 440,
-        psy: 560,
-        atk: 496,
-        def: 504,
-        spd: 498,
-        int: 518
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -187,14 +163,6 @@
         def: 2450,
         spd: 2530,
         int: 2470
-      },
-      boosts_on_stats: {
-        hlt: 485,
-        psy: 510,
-        atk: 514,
-        def: 490,
-        spd: 506,
-        int: 494
       },
       types: {
         awesome: ['perfect'],
@@ -215,14 +183,6 @@
         spd: 2350,
         int: 2450
       },
-      boosts_on_stats: {
-        hlt: 564,
-        psy: 486,
-        atk: 500,
-        def: 510,
-        spd: 470,
-        int: 490
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -241,14 +201,6 @@
         def: 2550,
         spd: 2500,
         int: 2400
-      },
-      boosts_on_stats: {
-        hlt: 560,
-        psy: 480,
-        atk: 600,
-        def: 510,
-        spd: 500,
-        int: 480
       },
       types: {
         awesome: ['perfect'],
@@ -269,14 +221,6 @@
         spd: 2400,
         int: 3000
       },
-      boosts_on_stats: {
-        hlt: 484,
-        psy: 448,
-        atk: 460,
-        def: 464,
-        spd: 480,
-        int: 600
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -295,14 +239,6 @@
         def: 2550,
         spd: 2430,
         int: 2490
-      },
-      boosts_on_stats: {
-        hlt: 518,
-        psy: 510,
-        atk: 512,
-        def: 510,
-        spd: 486,
-        int: 498
       },
       types: {
         awesome: ['perfect'],
@@ -323,14 +259,6 @@
         spd: 2510,
         int: 2440
       },
-      boosts_on_stats: {
-        hlt: 488,
-        psy: 470,
-        atk: 536,
-        def: 560,
-        spd: 502,
-        int: 488
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -349,14 +277,6 @@
         def: 2470,
         spd: 2770,
         int: 2550
-      },
-      boosts_on_stats: {
-        hlt: 510,
-        psy: 548,
-        atk: 428,
-        def: 494,
-        spd: 554,
-        int: 510
       },
       types: {
         awesome: ['perfect'],
@@ -377,14 +297,6 @@
         spd: 2150,
         int: 2300
       },
-      boosts_on_stats: {
-        hlt: 540,
-        psy: 512,
-        atk: 564,
-        def: 536,
-        spd: 430,
-        int: 460
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -403,14 +315,6 @@
         def: 2480,
         spd: 2445,
         int: 2560
-      },
-      boosts_on_stats: {
-        hlt: 555,
-        psy: 478,
-        atk: 520,
-        def: 496,
-        spd: 489,
-        int: 512
       },
       types: {
         awesome: ['perfect'],
@@ -431,14 +335,6 @@
         spd: 2560,
         int: 2498
       },
-      boosts_on_stats: {
-        hlt: 519,
-        psy: 505,
-        atk: 500,
-        def: 500,
-        spd: 512,
-        int: 499
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -456,14 +352,6 @@
         atk: 2800,
         def: 0,
         spd: 2130,
-        int: 0
-      },
-      boosts_on_stats: {
-        hlt: 536,
-        psy: 536,
-        atk: 560,
-        def: 0,
-        spd: 426,
         int: 0
       },
       types: {
@@ -485,14 +373,6 @@
         spd: 2670,
         int: 2438
       },
-      boosts_on_stats: {
-        hlt: 488,
-        psy: 475,
-        atk: 496,
-        def: 503,
-        spd: 534,
-        int: 487
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -512,14 +392,6 @@
         spd: 2530,
         int: 2830
       },
-      boosts_on_stats: {
-        hlt: 466,
-        psy: 510,
-        atk: 553,
-        def: 445,
-        spd: 506,
-        int: 566
-      },
       types: {
         awesome: ['perfect'],
         best: [''],
@@ -538,14 +410,6 @@
         def: 2480,
         spd: 2450,
         int: 2400
-      },
-      boosts_on_stats: {
-        hlt: 510,
-        psy: 516,
-        atk: 484,
-        def: 496,
-        spd: 490,
-        int: 480
       },
       types: {
         awesome: ['perfect'],
@@ -603,10 +467,10 @@
       reset_colors();
       deadman = deadman_selected;
       return $.each(stats_list, function(i, stat) {
-        var percentage;
-        percentage = (100 + types[type_selected].stats[stat]) / 100;
-        $(".max-stats ." + stat, '#deadman-stats').html(Math.ceil(deadman.max_stats[stat] * percentage));
-        return $(".boosted-stats ." + stat, '#deadman-stats').html(Math.ceil((deadman.max_stats[stat] * percentage) + deadman.boosts_on_stats[stat]));
+        var incdec;
+        incdec = (100 + types[type_selected].stats[stat]) / 100;
+        $(".max-stats ." + stat, '#deadman-stats').html(Math.ceil(deadman.max_stats[stat] * incdec));
+        return $(".boosted-stats ." + stat, '#deadman-stats').html(Math.ceil((deadman.max_stats[stat] * incdec) + (deadman.max_stats[stat] * 0.2)));
       });
     };
     return reset_colors = function() {

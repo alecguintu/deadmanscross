@@ -31,12 +31,12 @@ $ ->
     deadman = deadman_selected
 
     $.each stats_list, (i, stat) ->
-      percentage = (100 + types[type_selected].stats[stat]) / 100
+      incdec = (100 + types[type_selected].stats[stat]) / 100
 
       $(".max-stats .#{stat}", '#deadman-stats')
-        .html(Math.ceil(deadman.max_stats[stat] * percentage))
+        .html(Math.ceil(deadman.max_stats[stat] * incdec))
       $(".boosted-stats .#{stat}", '#deadman-stats')
-        .html(Math.ceil((deadman.max_stats[stat] * percentage) + deadman.boosts_on_stats[stat]))
+        .html(Math.ceil((deadman.max_stats[stat] * incdec) + (deadman.max_stats[stat] * 0.2)))
 
   reset_colors = ->
     $('.container > h2').css('color', '#333')
