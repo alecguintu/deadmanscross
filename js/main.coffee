@@ -19,24 +19,33 @@ $ ->
   plot_selected_deadman = (type_selected = '') ->
     reset_colors()
 
-    deadman = deadman_selected
-    $('.container > h2').html(deadman.name)
-    $('#deadman-info > img').attr('src', "img/#{deadman.id}.jpg")
+    $('.container > h2').html(deadman_selected.name)
+    $('#deadman-info > img').attr('src', "img/#{deadman_selected.id}.jpg")
 
     plot_selected_deadmans_stats('average')
 
   plot_selected_deadmans_stats = (type_selected) ->
     reset_colors()
 
-    deadman = deadman_selected
+    $('.fa-power-off').css('color', color_types[get_rank_color(type_selected)]).attr('title', "#{get_rank_color(type_selected)} type")
 
     $.each stats_list, (i, stat) ->
       incdec = (100 + types[type_selected].stats[stat]) / 100
 
       $(".max-stats .#{stat}", '#deadman-stats')
-        .html(Math.ceil(deadman.max_stats[stat] * incdec))
+        .html(Math.ceil(deadman_selected.max_stats[stat] * incdec))
       $(".boosted-stats .#{stat}", '#deadman-stats')
-        .html(Math.ceil((deadman.max_stats[stat] * incdec) + (deadman.max_stats[stat] * 0.2)))
+        .html(Math.ceil((deadman_selected.max_stats[stat] * incdec) + (deadman_selected.max_stats[stat] * 0.2)))
 
   reset_colors = ->
     $('.container > h2').css('color', '#333')
+    $('.fa-power-off').css('color', '#333')
+
+  get_rank_color = (type_selected) ->
+    selected_rank = ''
+    $.each deadman_selected.type_ranks, (rank, types) ->
+      if $.inArray(type_selected, types) != -1
+        selected_rank = rank
+        return
+
+    return selected_rank

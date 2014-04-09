@@ -26,3 +26,10 @@ body {
 footer {
   text-align: center;
 }
+
+.fa-power-off {
+  float: left;
+  margin-top: 25px;
+  font-size: 25px;
+  margin-right: 10px;
+}
