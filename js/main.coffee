@@ -21,7 +21,7 @@ $ ->
 
     deadman = deadman_selected
     $('.container > h2').html(deadman.name)
-    $('#deadman-info > img').attr('src', "img/#{deadman.id}.png")
+    $('#deadman-info > img').attr('src', "img/#{deadman.id}.jpg")
 
     plot_selected_deadmans_stats('average')
 
@@ -36,7 +36,7 @@ $ ->
       $(".max-stats .#{stat}", '#deadman-stats')
         .html(Math.ceil(deadman.max_stats[stat] * percentage))
       $(".boosted-stats .#{stat}", '#deadman-stats')
-        .html(Math.ceil((deadman.max_stats[stat] + deadman.boosts_on_stats[stat]) * percentage))
+        .html(Math.ceil((deadman.max_stats[stat] * percentage) + deadman.boosts_on_stats[stat]))
 
   reset_colors = ->
     $('.container > h2').css('color', '#333')
