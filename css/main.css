@@ -1,22 +1,25 @@
-
-
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+body {
+  padding: 50px 0 20px 0;
+}
+#deadmen-types-list li {
+  text-transform: capitalize;
+}
+#deadman-info > img {
+  width: 166px;
+  height: 250px;
+  float: left;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#deadman-info table thead th {
+  text-transform: uppercase;
+}
+#deadman-info .max-stats .inc {
+  background-color: green;
+}
+#deadman-info .max-stats .dec {
+  background-color: red;
+}
