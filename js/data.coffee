@@ -12,13 +12,55 @@ types = {
   perfect: { id: 'perfect', stats: { hlt: 10, psy: 10, atk: 10, def: 10, spd: 10, int: 10 } }
 }
 
+elements = {
+  physical: {
+    critical: []
+    blocked: []
+  }
+  burner: {
+    critical: ['spitter', 'leecher']
+    blocked: ['burner', 'chiller', 'charmer']
+  }
+  chiller: {
+    critical: ['burner', 'leecher']
+    blocked: ['chiller', 'shocker', 'spitter']
+  }
+  slasher: {
+    critical: ['shocker', 'spitter']
+    blocked: ['slasher', 'screamer', 'leecher']
+  }
+  shocker: {
+    critical: ['chiller', 'leecher']
+    blocked: ['slasher', 'shocker', 'screamer']
+  }
+  screamer: {
+    critical: ['slasher', 'shocker']
+    blocked: ['burner', 'screamer', 'charmer']
+  }
+  spitter: {
+    critical: ['burner', 'chiller']
+    blocked: ['slasher', 'spitter', 'charmer']
+  }
+  charmer: {
+    critical: ['screamer', 'spitter']
+    blocked: ['burner', 'charmer', 'leecher']
+  }
+  leecher: {
+    critical: ['slasher', 'charmer']
+    blocked: ['chiller', 'shocker', 'leecher']
+  }
+}
+
 deadmen_5 = {
   abraham_lincoln: {
     id: 'abraham_lincoln'
     name: 'Abraham Lincoln'
     max_stats: { hlt: 2570, psy: 2570, atk: 2430, def: 2220, spd: 2490, int: 2650 }
     type_ranks: { awesome: ['perfect'], best: ['smart', 'quick'], decent: ['tough', 'average'], bad: ['fresh', 'strong'] }
-    skills: [ 'burner +2', 'atk -20', 'int +20', 'burner +3', 'burner +4' ]
+    skills: {
+      learned: {'burner +2', 'atk -20', 'int +20', 'burner +3', 'burner +4' }
+      preferred: {'atk -20', 'int +20', 'burner +4'}
+    }
   }
 
   attack_helicopter: {
@@ -102,6 +144,14 @@ deadmen_5 = {
     skills: []
   }
 
+  peregrine_falcon: {
+    id: 'peregrine_falcon'
+    name: 'Peregrine Falcon'
+    max_stats: { hlt: 2600, psy: 2310, atk: 2600, def: 2450, spd: 2550, int: 2200 }
+    type_ranks: { awesome: ['perfect'], best: [''], decent: [''], bad: [''] },
+    skills: []
+  }
+
 
   abhorrent_airship: {
     id: 'abhorrent_airship'
@@ -122,7 +172,7 @@ deadmen_5 = {
   mars: {
     id: 'mars'
     name: 'Mars'
-    max_stats: { hlt: 2680, psy: 2680, atk: 2800, def: 0, spd: 2130, int: 0 }
+    max_stats: { hlt: 2680, psy: 2680, atk: 2800, def: 2470, spd: 2130, int: 2500 }
     type_ranks: { awesome: ['perfect'], best: [''], decent: [''], bad: [''] },
     skills: []
   }
