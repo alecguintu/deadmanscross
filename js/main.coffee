@@ -32,7 +32,7 @@ $ ->
     reset_colors()
 
     rank = get_rank_color(deadman, type)
-    $('.fa-power-off').css('color', color_types[type]).attr('title', "#{rank} type")
+    $('.fa-power-off').css('color', color_types[rank]).attr('title', "#{rank} type")
     $("#deadmen-types-list a[data-type='#{type}']").css('color', '#333').css('font-weight', 'bold')
 
     $.each stats_list, (i, stat) ->
