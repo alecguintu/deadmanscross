@@ -514,11 +514,15 @@
   });
 
   $(function() {
-    var get_rank_color, plot_selected_deadman, plot_selected_deadmans_stats, reset_colors, url;
+    var get_rank_color, load_from_url, plot_selected_deadman, plot_selected_deadmans_stats, reset_colors;
     $('.deadmen-list').on('click', '.deadmen-show-detail', function(e) {
+      var deadman;
       e.preventDefault();
-      plot_selected_deadman(deadmen_5[$(this).data('id')]);
-      return window.history.pushState({}, 'Title', 'asd');
+      deadman = deadmen_5[$(this).data('id')];
+      plot_selected_deadman(deadman);
+      return window.history.pushState({
+        url: '/index.html'
+      }, 'Title', "?" + deadman.id + "=average");
     });
     $('#deadmen-types-list').on('click', 'a.types', function(e) {
       var deadman;
@@ -528,7 +532,8 @@
         $('.container > h2').css('color', 'red').html('[ Select Deadman <i class="fa fa-exclamation"></i> ]');
         return;
       }
-      return plot_selected_deadmans_stats(deadman, $(this).data('type'));
+      plot_selected_deadmans_stats(deadman, $(this).data('type'));
+      return window.history.pushState({}, 'Title', "?" + deadman.id + "=" + ($(this).data('type')));
     });
     plot_selected_deadman = function(deadman, type) {
       if (type == null) {
@@ -571,10 +576,16 @@
       });
       return selected_rank;
     };
-    url = $.url();
-    console.log(url.param());
-    return $.each(url.param(), function(deadman, type) {
-      return plot_selected_deadman(deadmen_5[deadman], type);
+    load_from_url = function() {
+      var url;
+      url = $.url();
+      return $.each(url.param(), function(deadman, type) {
+        return plot_selected_deadman(deadmen_5[deadman], type);
+      });
+    };
+    load_from_url();
+    return $(window).on('popstate', function(e) {
+      return load_from_url();
     });
   });
 

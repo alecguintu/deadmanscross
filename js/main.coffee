@@ -4,8 +4,9 @@ $ ->
   $('.deadmen-list').on 'click', '.deadmen-show-detail', (e) ->
     e.preventDefault()
 
-    plot_selected_deadman(deadmen_5[$(this).data('id')])
-    window.history.pushState({}, 'Title', 'asd')
+    deadman = deadmen_5[$(this).data('id')]
+    plot_selected_deadman(deadman)
+    window.history.pushState({url: '/index.html'}, 'Title', "?#{deadman.id}=average")
 
   $('#deadmen-types-list').on 'click', 'a.types', (e) ->
     e.preventDefault()
@@ -16,6 +17,7 @@ $ ->
       return
 
     plot_selected_deadmans_stats(deadman, $(this).data('type'))
+    window.history.pushState({}, 'Title', "?#{deadman.id}=#{$(this).data('type')}")
 
   plot_selected_deadman = (deadman, type = 'average') ->
     reset_colors()
@@ -55,7 +57,11 @@ $ ->
 
     return selected_rank
 
-  url = $.url()
-  console.log url.param()
-  $.each url.param(), (deadman, type) ->
-    plot_selected_deadman(deadmen_5[deadman], type)
+  load_from_url = ->
+    url = $.url()
+    $.each url.param(), (deadman, type) ->
+      plot_selected_deadman(deadmen_5[deadman], type)
+  load_from_url() # Load when directly visited
+
+  $(window).on 'popstate', (e) ->
+    load_from_url()
